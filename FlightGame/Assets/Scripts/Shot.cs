@@ -10,7 +10,7 @@ public class Shot : MonoBehaviour
     public GameObject[] gunSpots;
     public bool shotType1;
     public float bulletFrequency;
-    public float damage;
+    public float damage;    
 
     public float timer;
 
@@ -19,6 +19,7 @@ public class Shot : MonoBehaviour
     void Start()
     {
         gunSpots = GameObject.FindGameObjectsWithTag("GunSpot");
+        damage = GameObject.FindGameObjectWithTag("GameController").GetComponent<Balance>().MotherShipDamage;
     }
 
     // Update is called once per frame

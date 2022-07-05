@@ -7,6 +7,10 @@ TagManager:
   - GunSpot
   - Obstacle
   - MotherShip
+  - ScoreGate
+  - EnemyCraft
+  - PlayerSpawn
+  - Terrain
   layers:
   - Default
   - TransparentFX

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8884517200379860485}
   m_Layer: 0
   m_Name: terrain2
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -157,7 +157,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 470ca0bc847e4d948a212214424b67e4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 470ca0bc847e4d948a212214424b67e4,
         type: 3}
@@ -247,7 +247,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 9aa0400198121bc4a8b5b5de0b8938f7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9aa0400198121bc4a8b5b5de0b8938f7,
         type: 3}
@@ -302,6 +302,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2760658485439538168}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3066596848073940649 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9aa0400198121bc4a8b5b5de0b8938f7,
+    type: 3}
+  m_PrefabInstance: {fileID: 2760658485439538168}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &7296095881218717976
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3066596848073940649}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.29999998, y: 0.24347985, z: 0.34999996}
+  m_Center: {x: 0, y: 0.12843868, z: 0}
 --- !u!1001 &4153931396091051993
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -337,7 +356,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 470ca0bc847e4d948a212214424b67e4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 470ca0bc847e4d948a212214424b67e4,
         type: 3}
@@ -427,7 +446,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 93e0ad7e76424b749a922aebea3f06bd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 93e0ad7e76424b749a922aebea3f06bd,
         type: 3}
@@ -517,7 +536,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 93e0ad7e76424b749a922aebea3f06bd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 93e0ad7e76424b749a922aebea3f06bd,
         type: 3}
@@ -607,7 +626,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 470ca0bc847e4d948a212214424b67e4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 470ca0bc847e4d948a212214424b67e4,
         type: 3}
@@ -697,7 +716,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 470ca0bc847e4d948a212214424b67e4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 470ca0bc847e4d948a212214424b67e4,
         type: 3}
@@ -787,7 +806,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 470ca0bc847e4d948a212214424b67e4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 470ca0bc847e4d948a212214424b67e4,
         type: 3}
@@ -877,7 +896,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 470ca0bc847e4d948a212214424b67e4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 470ca0bc847e4d948a212214424b67e4,
         type: 3}

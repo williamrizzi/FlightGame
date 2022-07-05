@@ -11,8 +11,6 @@ public class Bullet : MonoBehaviour
     public float timeToDestroy;
     public Rigidbody rb;
 
-    
-
     // Start is called before the first frame update
     void Start()
     {
@@ -35,9 +33,14 @@ public class Bullet : MonoBehaviour
     {
         if(collision.transform.tag == "Obstacle")
         {
-            motherShip = GameObject.FindGameObjectWithTag("MotherShip");
-            collision.gameObject.GetComponent<Obstacle>().life -= motherShip.GetComponent<Shot>().damage;
+            collision.gameObject.GetComponent<Obstacle>().life -= motherShip.GetComponent<Shot>().damage;            
             Destroy(gameObject);
         }
+        if(collision.transform.tag == "EnemyCraft")
+        {
+            collision.gameObject.GetComponent<EnemyCraft>().Life -= motherShip.GetComponent<Shot>().damage;
+            Destroy(gameObject);
+        }
+    
     }
 }

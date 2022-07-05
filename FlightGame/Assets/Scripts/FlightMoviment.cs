@@ -3,8 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FlightMoviment : MonoBehaviour
-{    
+{
+    private GameController gameCtrl;
+    private Balance balanceScript;
+
     public bool canMove;
+
+    [SerializeField]
+    private float life;
+
 
     public float x, y;
 
@@ -14,12 +21,21 @@ public class FlightMoviment : MonoBehaviour
     [Range(0.01f, 12f)]
     public float speedFront;
 
-    public Rigidbody rb;
+
+    [SerializeField]
+    [Range(1f, 100f)]
+    float mainThrust = 100f;
+    [SerializeField]
+    [Range(0.01f, 200f)]
+    float rotationThrust = 1f;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = transform.GetComponent<Rigidbody>();
+        gameCtrl = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+        balanceScript = GameObject.FindGameObjectWithTag("GameController").GetComponent<Balance>();        
     }
 
     // Update is called once per frame
@@ -34,13 +50,47 @@ public class FlightMoviment : MonoBehaviour
             Vector3 moveVelocity = new Vector3(x, y, speedFront);
             moveVelocity *= (speedSides) * Time.deltaTime;
             transform.Translate(moveVelocity);
+
+            if (Input.GetKey(KeyCode.A))
+            {
+                
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+               
+            }
         }
-        
 
-        //transform.Translate(Vector3.forward * speed * Time.deltaTime);
-
-        //.velocity = new Vector3(rb.velocity.x, rb.velocity.y, rb.velocity.z * speed * Time.deltaTime);
-        
-
+        //Condição caso morra por tiros; Temporário, Ajustar;
+        if(life <= 0)
+        {
+            gameCtrl.StartCoroutine("SpawnGame");
+            Destroy(this.gameObject);
+        }        
     }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.transform.tag == "ScoreGate")
+        {
+            gameCtrl.AddScorePoints(balanceScript.ScorePointGate);
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.tag == "Obstacle")
+        {
+            gameCtrl.StartCoroutine("SpawnGame");
+            Destroy(this.gameObject);
+            
+        }
+        if (collision.transform.tag == "ScoreGate")
+        {
+            gameCtrl.StartCoroutine("SpawnGame");
+            Destroy(this.gameObject);            
+        }
+    }
+
+
 }
