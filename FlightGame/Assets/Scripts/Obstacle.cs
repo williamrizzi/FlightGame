@@ -6,7 +6,6 @@ public class Obstacle : MonoBehaviour
 {
     public float life;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +17,8 @@ public class Obstacle : MonoBehaviour
     {
         if(life <= 0)
         {
+            gameObject.GetComponent<ExplosionCubes>().Explode();
             Destroy(gameObject);
-        }
+        }                
     }
 }

@@ -14,7 +14,9 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody>();        
+        rb = gameObject.GetComponent<Rigidbody>();
+        bulletSpeed = GameObject.FindGameObjectWithTag("GameController").GetComponent<Balance>().MotheShipBulletSpeed;
+        motherShip = GameObject.FindGameObjectWithTag("MotherShip");
     }
 
     // Update is called once per frame

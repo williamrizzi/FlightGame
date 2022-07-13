@@ -11,6 +11,7 @@ TagManager:
   - EnemyCraft
   - PlayerSpawn
   - Terrain
+  - CubeExplosion
   layers:
   - Default
   - TransparentFX

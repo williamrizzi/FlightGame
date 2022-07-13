@@ -19,20 +19,21 @@ public class GameController : MonoBehaviour
 
     IEnumerator SpawnGame()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(1f);
 
         //TEMPORÁRIO, PODE SOFRER MUDANÇAS FUTURAS
+        Instantiate(playerShip, spawnPlayer.transform.position, Quaternion.identity);
+
         mapGen.DestroyAllTerrains();
+        DestroyAllCubes();
 
         mapGen.SpawnBaseTerrain();
-
-        Instantiate(playerShip, spawnPlayer.transform.position, Quaternion.identity);
 
         camFollow.FindMyTarget();        
 
         yield return new WaitForSeconds(0.3f);
 
-        GameObject.FindGameObjectWithTag("MotherShip").GetComponent<FlightMoviment>().canMove = true;
+        //GameObject.FindGameObjectWithTag("MotherShip").GetComponent<FlightMoviment>().canMove = true;
     }
 
 
@@ -62,7 +63,15 @@ public class GameController : MonoBehaviour
         score += scorePoint;
         return score;
     }
-
+    
+    private void DestroyAllCubes()
+    {
+        GameObject[] cubesToDestroy = GameObject.FindGameObjectsWithTag("CubeExplosion");
+        for(int i = 0; i < cubesToDestroy.Length; i++)
+        {
+            Destroy(cubesToDestroy[i]);
+        }
+    }
 
    
 

@@ -8,6 +8,10 @@ public class MapGeneration : MonoBehaviour
     public int tamanho;
     public int atualSpot;
 
+    [SerializeField]
+    [Range(0, 100)]
+    private int randonSize;
+
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +30,7 @@ public class MapGeneration : MonoBehaviour
 
     public void CreateNextTerrain()
     {
-        int random = Random.Range(0, 5);
+        int random = Random.Range(0, randonSize);
         Vector3 temp = new Vector3(0, -20, atualSpot);
         Instantiate(terrain[random], temp, transform.rotation);
         atualSpot += 20;
@@ -37,7 +41,7 @@ public class MapGeneration : MonoBehaviour
         atualSpot = 0;
         for (int i = 0; i < tamanho; i++)
         {
-            int random = Random.Range(0, 5);
+            int random = Random.Range(0, randonSize);
             Vector3 temp = new Vector3(0, 0, atualSpot);
             Instantiate(terrain[random], temp, transform.rotation);
             atualSpot += 20;

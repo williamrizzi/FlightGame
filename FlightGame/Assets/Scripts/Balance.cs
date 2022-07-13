@@ -10,7 +10,11 @@ public class Balance : MonoBehaviour
     //MotherShip
     [SerializeField]
     private float motherShipDamage;
-    private float motherBaseDamage;    
+    private float motherBaseDamage;
+
+    [SerializeField]
+    private float motheShipBulletSpeed;
+
 
     //EnemyCraft
     [SerializeField]
@@ -33,4 +37,5 @@ public class Balance : MonoBehaviour
     public int ScorePointGate { get => scorePointGate; }
     public float MotherShipDamage { get => motherShipDamage; }
     public float EnemyCraftLife { get => enemyCraftLife; }
+    public float MotheShipBulletSpeed { get => motheShipBulletSpeed; }
 }

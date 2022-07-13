@@ -6,6 +6,7 @@ public class FlightMoviment : MonoBehaviour
 {
     private GameController gameCtrl;
     private Balance balanceScript;
+    private Rigidbody rb;
 
     public bool canMove;
 
@@ -13,52 +14,63 @@ public class FlightMoviment : MonoBehaviour
     private float life;
 
 
-    public float x, y;
+    public float x, y, z;
 
-    [Range(0.01f, 12f)]
+    [Range(0f, 50f)]
     public float speedSides;
 
-    [Range(0.01f, 12f)]
+    [Range(0f, 50f)]
     public float speedFront;
 
+    [SerializeField]
+    [Range(0, 25)]
+    private int rotAngleX;
 
     [SerializeField]
-    [Range(1f, 100f)]
-    float mainThrust = 100f;
-    [SerializeField]
-    [Range(0.01f, 200f)]
-    float rotationThrust = 1f;
-
+    [Range(0, 25)]
+    private int rotAngleY;
 
 
     // Start is called before the first frame update
     void Start()
     {
         gameCtrl = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
-        balanceScript = GameObject.FindGameObjectWithTag("GameController").GetComponent<Balance>();        
+        balanceScript = GameObject.FindGameObjectWithTag("GameController").GetComponent<Balance>();
+        rb = GetComponent<Rigidbody>();
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
         if(canMove == true)
         {
             x = Input.GetAxis("Horizontal");
             y = Input.GetAxis("Vertical");
 
-            Vector3 moveVelocity = new Vector3(x, y, speedFront);
-            moveVelocity *= (speedSides) * Time.deltaTime;
-            transform.Translate(moveVelocity);
+            //Vector3 moveVelocity = new Vector3(x, y, speedFront);
+            //moveVelocity *= (speedSides) * Time.deltaTime;
+            //transform.Translate(moveVelocity);
 
-            if (Input.GetKey(KeyCode.A))
-            {
-                
+            rb.velocity = new Vector3(x * speedSides, y * speedSides, speedFront);
+
+
+
+            if (x < 0) 
+            { 
+                transform.GetChild(0).transform.rotation = Quaternion.Euler(0, 0, rotAngleX);
             }
-            if (Input.GetKey(KeyCode.D))
-            {
-               
+            else if (x > 0)
+            {   
+                transform.GetChild(0).transform.rotation = Quaternion.Euler(0, 0, -rotAngleX);                
             }
+            else
+            {     
+                transform.GetChild(0).transform.rotation = Quaternion.Euler(0, 0, 0); ;
+            }
+
+         
         }
 
         //Condição caso morra por tiros; Temporário, Ajustar;
@@ -67,6 +79,11 @@ public class FlightMoviment : MonoBehaviour
             gameCtrl.StartCoroutine("SpawnGame");
             Destroy(this.gameObject);
         }        
+    }
+
+    private void FixedUpdate()
+    {
+        
     }
 
 
@@ -81,13 +98,15 @@ public class FlightMoviment : MonoBehaviour
     {
         if (collision.transform.tag == "Obstacle")
         {
-            gameCtrl.StartCoroutine("SpawnGame");
+            //gameCtrl.StartCoroutine("SpawnGame");
+            gameObject.GetComponent<ExplosionCubes>().Explode();
             Destroy(this.gameObject);
             
         }
         if (collision.transform.tag == "ScoreGate")
         {
             gameCtrl.StartCoroutine("SpawnGame");
+            gameObject.GetComponent<ExplosionCubes>().Explode();
             Destroy(this.gameObject);            
         }
     }
