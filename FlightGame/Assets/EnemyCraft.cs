@@ -6,7 +6,13 @@ public class EnemyCraft : MonoBehaviour
 {
     [SerializeField]
     private float life = 0;
-    
+
+    private GameObject targetPosition;
+    private GameObject targetEnemy;
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {

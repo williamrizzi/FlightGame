@@ -98,7 +98,7 @@ public class FlightMoviment : MonoBehaviour
     {
         if (collision.transform.tag == "Obstacle")
         {
-            //gameCtrl.StartCoroutine("SpawnGame");
+            gameCtrl.StartCoroutine("SpawnGame");
             gameObject.GetComponent<ExplosionCubes>().Explode();
             Destroy(this.gameObject);
             

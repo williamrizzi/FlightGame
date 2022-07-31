@@ -777,6 +777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f09af8e3ab0138d479c784677755184b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  balanceScript: {fileID: 0}
   terrain:
   - {fileID: 7643286497839593599, guid: 588fd9c0a3ea96d4eb8103bf2e34d9c7, type: 3}
   - {fileID: 4264065803542015838, guid: 36faf11c06bdd40498f879afd8d1f069, type: 3}
@@ -785,7 +786,36 @@ MonoBehaviour:
   - {fileID: 4457581575597140994, guid: 6f0cca845ee82bf46b78e1cf3668534b, type: 3}
   tamanho: 12
   atualSpot: 0
-  randonSize: 4
+  randonSize: 5
+  forestTerrains:
+  - {fileID: 8036820551211793156, guid: d5c43aae04a97b74da6e5b9399d9ffa0, type: 3}
+  - {fileID: 4973330201091165449, guid: 65a0bfdaf95e4574c965f4071b114f12, type: 3}
+  - {fileID: 7626237052876669004, guid: d3936de0f2e18f443a606ae9660a5b76, type: 3}
+  - {fileID: 3740198945703418518, guid: 8b329f6c48e858a4eb5aa745ee2009e4, type: 3}
+  urbanTerrains:
+  - {fileID: 8036820551211793156, guid: b730a616e9a707c458b10bf7195d1c32, type: 3}
+  - {fileID: 4973330201091165449, guid: 8f636a67e20da104fad4b5c8ba172e48, type: 3}
+  - {fileID: 7626237052876669004, guid: f3cd5b9dc0960d0449797c369eed9fba, type: 3}
+  - {fileID: 3740198945703418518, guid: 4757b15b9bb92af4dbbbf87c532dd2c2, type: 3}
+  cemeteryTerrains:
+  - {fileID: 8036820551211793156, guid: 0d397a2eeb7f8764aa0fe873668703b8, type: 3}
+  - {fileID: 4973330201091165449, guid: 1520520dab33864459dd5e738b480037, type: 3}
+  - {fileID: 7626237052876669004, guid: 5db3d8afb56060440915bd4c520d9ee3, type: 3}
+  - {fileID: 3740198945703418518, guid: 30f7bb2b8d1df034cb493137627f4342, type: 3}
+  headquartersTerrains:
+  - {fileID: 8036820551211793156, guid: d348d99edc247094aacb5cc545bf7d8e, type: 3}
+  - {fileID: 4973330201091165449, guid: 3fca9b8af1c97604688ab9c2ba4182f3, type: 3}
+  - {fileID: 7626237052876669004, guid: c3e6554d7e9c2c649897de88a42841df, type: 3}
+  - {fileID: 3740198945703418518, guid: e0010076b154b0e4b98daa40e5e06db7, type: 3}
+  forestStage: 1
+  urbanStage: 0
+  cemeteryStage: 0
+  headquartersStage: 0
+  boss: 0
+  normalEnemy: 0
+  bonus: 0
+  neutral: 1
+  durationStage: 70
 --- !u!4 &2013528989
 Transform:
   m_ObjectHideFlags: 0
@@ -830,6 +860,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scorePointGate: 3
+  stageDuration: 78
+  roundForBonus: 320000001e000000
+  roundForEnemy: 3c0000002800000014000000
+  roundForBoss: 10
   motherShipDamage: 8
   motheShipBulletSpeed: 0.4
   enemyCraftLife: 0

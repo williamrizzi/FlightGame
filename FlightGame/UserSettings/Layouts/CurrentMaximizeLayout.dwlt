@@ -187,8 +187,8 @@ MonoBehaviour:
     y: 0
     width: 233
     height: 728
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -226,9 +226,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 060b0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 046ff2ffe07df2ffecb4ffff36fbffff
+      m_ExpandedIDs: 36fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -300,8 +300,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 233
-    y: 73
+    x: 234
+    y: 19
     width: 1233
     height: 707
   m_ViewDataDictionary: {fileID: 0}
@@ -505,9 +505,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.036484063, y: 4.604791, z: 9.698662}
+    m_Target: {x: 0, y: 4.5283318, z: -14.86}
     speed: 2
-    m_Value: {x: -0.036484063, y: 4.604791, z: 9.698662}
+    m_Value: {x: 0, y: 4.5283318, z: -14.86}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -554,13 +554,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.07596269, y: 0.907016, z: -0.18622217, w: 0.3699688}
+    m_Target: {x: -0.32718787, y: -0.23821203, z: 0.08560574, w: -0.9104399}
     speed: 2
-    m_Value: {x: 0.07596255, y: 0.90701425, z: -0.18622181, w: 0.3699681}
+    m_Value: {x: -0.3271836, y: -0.23820893, z: 0.08560463, w: -0.9104281}
   m_Size:
-    m_Target: 0.72159857
+    m_Target: 16.14783
     speed: 2
-    m_Value: 0.72159857
+    m_Value: 16.14783
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -654,22 +654,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Rizzi\Documents\Repository\FlightGame\FlightGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 110}
-    m_SelectedIDs: 00650000
-    m_LastClickedID: 25856
-    m_ExpandedIDs: 0000000096640000fe6400000065000000ca9a3b
+    scrollPos: {x: 0, y: 46}
+    m_SelectedIDs: 12650000
+    m_LastClickedID: 25874
+    m_ExpandedIDs: 00000000b8640000ba64000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -697,7 +697,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009664000000ca9a3b
+    m_ExpandedIDs: 00000000b8640000ba640000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -722,8 +722,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 060b0000
+    m_LastClickedInstanceID: 2822
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000026720000b470000044640000
     m_RenameOverlay:
@@ -801,8 +801,8 @@ MonoBehaviour:
     y: 0
     width: 452
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}

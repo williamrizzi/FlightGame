@@ -7,6 +7,20 @@ public class Balance : MonoBehaviour
     [SerializeField]
     private int scorePointGate = 3;
 
+
+    [SerializeField]
+    private int stageDuration;
+    [SerializeField]
+    private int[] roundForBonus;    
+    [SerializeField]
+    private int[] roundForEnemy;
+    [SerializeField]
+    private int roundForBoss;
+
+
+
+
+
     //MotherShip
     [SerializeField]
     private float motherShipDamage;
@@ -38,4 +52,8 @@ public class Balance : MonoBehaviour
     public float MotherShipDamage { get => motherShipDamage; }
     public float EnemyCraftLife { get => enemyCraftLife; }
     public float MotheShipBulletSpeed { get => motheShipBulletSpeed; }
+    public int[] RoundForBonus { get => roundForBonus; }
+    public int[] RoundForEnemy { get => roundForEnemy; }
+    public int RoundForBoss { get => roundForBoss; }
+    public int StageDuration { get => stageDuration; }
 }

@@ -33,7 +33,7 @@ public class GameController : MonoBehaviour
 
         yield return new WaitForSeconds(0.3f);
 
-        //GameObject.FindGameObjectWithTag("MotherShip").GetComponent<FlightMoviment>().canMove = true;
+        GameObject.FindGameObjectWithTag("MotherShip").GetComponent<FlightMoviment>().canMove = true;
     }
 
 
